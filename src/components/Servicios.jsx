@@ -11,7 +11,8 @@ function Servicios() {
         </p>
 
         <h2>
-          Soluciones web para hacer crecer tu negocio.
+          Cada proyecto, idea o emprendimiento necesita una presencia web
+          pensada para sus propias necesidades.
         </h2>
 
         <div className="servicios-lista">
@@ -19,48 +20,51 @@ function Servicios() {
           <article className="servicio">
             <h3>Landing pages</h3>
             <p>
-              Páginas web enfocadas en presentar productos, servicios,
-              profesionales o emprendimientos.
+              Páginas web pensadas para presentar una propuesta, producto,
+              servicio, profesional, idea o emprendimiento de forma clara
+              y directa.
             </p>
           </article>
 
           <article className="servicio">
-            <h3>Sitios web para emprendedores</h3>
+            <h3>Sitios web personalizados</h3>
             <p>
-              Sitios personalizados para pequeños negocios y emprendimientos
-              que necesitan tener presencia online.
+              Sitios adaptados a personas, profesionales, emprendimientos,
+              comercios, proyectos y organizaciones que quieren tener un
+              espacio propio en internet.
             </p>
           </article>
 
           <article className="servicio">
             <h3>Páginas institucionales</h3>
             <p>
-              Sitios para empresas, comercios, profesionales y organizaciones
-              que necesitan presentar su actividad y servicios.
+              Sitios para empresas, comercios, profesionales e instituciones
+              que necesitan presentar su actividad, servicios e información.
             </p>
           </article>
 
           <article className="servicio">
             <h3>Catálogos online</h3>
             <p>
-              Catálogos digitales para mostrar productos o servicios de forma
-              clara y accesible.
+              Espacios digitales para mostrar productos o servicios de manera
+              ordenada, accesible y fácil de consultar.
             </p>
           </article>
 
           <article className="servicio">
             <h3>Mantenimiento web</h3>
             <p>
-              Actualización de contenido, imágenes, información y ajustes
-              necesarios para mantener el sitio actualizado.
+              Actualización de contenido, imágenes e información para mantener
+              el sitio al día y adaptarlo a las necesidades del proyecto.
             </p>
           </article>
 
           <article className="servicio">
             <h3>Optimización y publicación</h3>
             <p>
-              Configuración, publicación y optimización básica para dejar el
-              sitio disponible online y preparado para buscadores.
+              Configuración y publicación del sitio, junto con ajustes básicos
+              para mejorar su funcionamiento y facilitar su presencia en
+              buscadores.
             </p>
           </article>
 
@@ -73,3 +77,4 @@ function Servicios() {
 }
 
 export default Servicios
+

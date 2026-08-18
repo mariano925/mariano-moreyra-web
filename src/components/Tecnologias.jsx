@@ -11,49 +11,65 @@ function Tecnologias() {
         </p>
 
         <h2>
-          Herramientas con las que desarrollo mis proyectos.
+          Herramientas que utilizo para crear y publicar sitios web.
         </h2>
 
         <div className="tecnologias-lista">
 
           <div className="tecnologia">
             <h3>HTML</h3>
-            <p>Estructura y semántica web.</p>
+            <p>
+              Estructura y organización del contenido de cada sitio web.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>CSS</h3>
-            <p>Diseño, responsive y experiencia visual.</p>
+            <p>
+              Diseño visual, adaptación a distintos dispositivos y estilos.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>JavaScript</h3>
-            <p>Lógica e interacción de aplicaciones web.</p>
+            <p>
+              Interacción y funcionalidades para sitios y aplicaciones web.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>React</h3>
-            <p>Desarrollo de interfaces y aplicaciones web.</p>
+            <p>
+              Desarrollo de interfaces y aplicaciones web dinámicas.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>Node.js</h3>
-            <p>Desarrollo del lado del servidor.</p>
+            <p>
+              Desarrollo de funcionalidades y aplicaciones del lado del servidor.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>Git & GitHub</h3>
-            <p>Control de versiones y gestión de proyectos.</p>
+            <p>
+              Control de versiones y organización del código de los proyectos.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>Vite</h3>
-            <p>Herramienta para desarrollo frontend.</p>
+            <p>
+              Herramienta utilizada para desarrollar proyectos frontend modernos.
+            </p>
           </div>
 
           <div className="tecnologia">
             <h3>Vercel</h3>
-            <p>Publicación y despliegue de proyectos web.</p>
+            <p>
+              Publicación y despliegue de sitios y proyectos web.
+            </p>
           </div>
 
         </div>
@@ -64,4 +80,4 @@ function Tecnologias() {
   )
 }
 
-export default Tecnologias;
+export default Tecnologias

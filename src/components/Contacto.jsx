@@ -11,12 +11,12 @@ function Contacto() {
         </p>
 
         <h2>
-          ¿Tenés un proyecto en mente?
+          ¿Tenés una idea o un proyecto en mente?
         </h2>
 
         <p className="contacto-descripcion">
-          Contame qué necesitás y podemos hablar sobre cómo llevar tu
-          proyecto a la web.
+          Contame qué tenés en mente, aunque todavía sea solo una idea,
+          y podemos conversar sobre la mejor forma de llevarla a la web.
         </p>
 
         <form className="contacto-form">
@@ -47,7 +47,7 @@ function Contacto() {
               id="mensaje"
               name="mensaje"
               rows="6"
-              placeholder="Contame sobre tu proyecto..."
+              placeholder="Contame sobre tu idea o proyecto..."
             ></textarea>
           </div>
 
@@ -64,3 +64,4 @@ function Contacto() {
 }
 
 export default Contacto
+

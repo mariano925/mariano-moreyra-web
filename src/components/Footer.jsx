@@ -44,7 +44,7 @@ function Footer() {
         <div className="footer-precios">
 
           <a href="#">
-            Lista de precios
+            consuta mis precios
           </a>
 
         </div>

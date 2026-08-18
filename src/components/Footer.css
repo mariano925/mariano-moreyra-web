@@ -170,3 +170,40 @@
 
   color: rgba(245, 241, 232, 0.55);
 }
+
+/* =========================
+   LISTA DE PRECIOS
+========================= */
+
+.footer-precios {
+  margin-top: 10px;
+}
+
+.footer-precios a {
+  display: inline-block;
+
+  padding: 11px 20px;
+
+  border: 1px solid var(--amarillo);
+  border-radius: 50px;
+
+  color: var(--amarillo);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-precios a:hover {
+  color: var(--verde);
+
+  background-color: var(--amarillo);
+
+  transform: translateY(-2px);
+}

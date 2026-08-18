@@ -32,7 +32,8 @@ function Proyectos() {
 
               <p>
                 Landing page desarrollada para presentar el trabajo y la
-                trayectoria de un artista.
+                trayectoria de un artista, con una estructura clara y
+                adaptada a distintos dispositivos.
               </p>
 
               <p className="proyecto-tecnologias">
@@ -72,7 +73,8 @@ function Proyectos() {
 
               <p>
                 Landing page diseñada para presentar los servicios de un
-                profesional y facilitar el contacto con potenciales clientes.
+                profesional y facilitar el contacto con personas interesadas
+                en sus servicios.
               </p>
 
               <p className="proyecto-tecnologias">
@@ -111,8 +113,8 @@ function Proyectos() {
               </h3>
 
               <p>
-                Próximo proyecto orientado a la presentación de productos
-                o servicios de forma clara, accesible y adaptada a cada negocio.
+                Próximo proyecto orientado a mostrar productos o servicios
+                de forma clara, accesible y organizada.
               </p>
 
               <p className="proyecto-tecnologias">
@@ -148,11 +150,12 @@ function Proyectos() {
 
               <p>
                 Próximo proyecto destinado a presentar la identidad,
-                servicios e información de una empresa o negocio.
+                servicios e información de una empresa, profesional,
+                organización o proyecto.
               </p>
 
               <p className="proyecto-tecnologias">
-                Ract . vite · CSS · JavaScript
+                React · Vite · CSS · JavaScript
               </p>
 
               <div className="proyecto-links">
