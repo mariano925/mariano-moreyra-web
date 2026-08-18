@@ -1,10 +1,11 @@
 import "./Hero.css"
+
 function Hero() {
   return (
     <section className="hero" id="inicio">
 
       <p className="hero-subtitle">
-        DESARROLLO WEB
+        SITIOS WEB A MEDIDA
       </p>
 
       <h1 className="hero-title">
@@ -12,11 +13,12 @@ function Hero() {
       </h1>
 
       <p className="hero-description">
-        Creo sitios web para emprendedores y pequeños negocios.
+        Creo sitios web modernos, claros y funcionales para personas y
+        proyectos que quieren tener su lugar en internet.
       </p>
 
       <p className="hero-services">
-        Landing pages · Sitios institucionales · Catálogos
+        Landing pages · Sitios institucionales · Catálogos online
       </p>
 
       <div className="hero-buttons">
@@ -28,4 +30,4 @@ function Hero() {
   )
 }
 
-export default Hero;
+export default Hero

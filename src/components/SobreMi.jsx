@@ -11,7 +11,7 @@ function SobreMi() {
         </p>
 
         <h2>
-          Desarrollo soluciones web para emprendedores y pequeños negocios.
+          Desarrollo sitios web pensados para las necesidades de cada proyecto.
         </h2>
 
         <p>
@@ -24,7 +24,6 @@ function SobreMi() {
           Me interesa crear sitios web claros, funcionales y adaptados a las
           necesidades de cada proyecto, desde landing pages y sitios
           institucionales hasta catálogos.
-          (página en desarrollo).
         </p>
 
       </div>
