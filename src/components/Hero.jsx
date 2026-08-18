@@ -20,8 +20,8 @@ function Hero() {
       </p>
 
       <div className="hero-buttons">
-        <a href="#proyectos">Ver mis proyectos</a>
-        <a href="#contacto">Contactarme</a>
+        <a href="#proyectos">Mira mis proyectos</a>
+        <a href="#contacto">Escríbeme</a>
       </div>
 
     </section>
