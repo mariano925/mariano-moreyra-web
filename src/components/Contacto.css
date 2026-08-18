@@ -1,0 +1,221 @@
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+  padding: 120px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(233, 185, 73, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(23, 63, 53, 0.20),
+      transparent 38%
+    ),
+    var(--coral);
+}
+
+.contacto-contenido {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.contacto-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: var(--amarillo);
+}
+
+.contacto h2 {
+  max-width: 800px;
+
+  margin-bottom: 25px;
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+
+  line-height: 1.1;
+
+  color: var(--crema);
+}
+
+.contacto-descripcion {
+  max-width: 650px;
+
+  margin-bottom: 55px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  color: rgba(245, 241, 232, 0.9);
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.contacto-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+
+  padding: 42px;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--crema),
+      #EDE7DC
+    );
+
+  border-radius: 28px;
+
+  box-shadow:
+    15px 18px 35px rgba(23, 63, 53, 0.20),
+    -8px -8px 20px rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.campo label {
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  color: var(--verde);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+
+  padding: 15px 17px;
+
+  border: 2px solid rgba(23, 63, 53, 0.12);
+
+  border-radius: 14px;
+
+  background-color: #FAF8F3;
+
+  color: var(--verde);
+
+  font-family: inherit;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.campo input:hover,
+.campo textarea:hover {
+  border-color: rgba(23, 107, 135, 0.30);
+}
+
+.campo textarea {
+  resize: vertical;
+
+  min-height: 140px;
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--azul);
+
+  background-color: #FFFFFF;
+
+  box-shadow:
+    0 0 0 4px rgba(23, 107, 135, 0.12);
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.contacto-form button {
+  align-self: flex-start;
+
+  padding: 14px 30px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background-color: var(--verde);
+
+  color: var(--crema);
+
+  font-family: inherit;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contacto-form button:hover {
+  background-color: var(--amarillo);
+
+  color: var(--verde);
+
+  transform:
+    translateY(-4px)
+    rotate(-1deg);
+
+  box-shadow:
+    0 8px 18px rgba(23, 63, 53, 0.18);
+}
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+.contacto-form button:focus-visible,
+.campo input:focus-visible,
+.campo textarea:focus-visible {
+  outline: 3px solid rgba(233, 185, 73, 0.55);
+
+  outline-offset: 3px;
+}

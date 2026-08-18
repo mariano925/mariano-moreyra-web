@@ -1,0 +1,141 @@
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.sobre-mi {
+  padding: 120px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(23, 107, 135, 0.22),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(233, 185, 73, 0.08),
+      transparent 35%
+    ),
+    var(--verde);
+}
+
+.sobre-mi-contenido {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.sobre-mi-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: var(--amarillo);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.sobre-mi h2 {
+  max-width: 850px;
+
+  margin-bottom: 35px;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+
+  color: var(--crema);
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.sobre-mi p {
+  max-width: 760px;
+
+  margin-bottom: 20px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  color: rgba(245, 241, 232, 0.85);
+}
+
+
+/* =========================
+   DESTACADO
+========================= */
+
+.sobre-mi p strong {
+  color: var(--amarillo);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .sobre-mi {
+    padding: 100px 24px;
+  }
+
+  .sobre-mi h2 {
+    max-width: 100%;
+  }
+
+  .sobre-mi p {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+  .sobre-mi {
+    padding: 80px 20px;
+  }
+
+  .sobre-mi-contenido {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sobre-mi-subtitle {
+    margin-bottom: 16px;
+
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .sobre-mi h2 {
+    margin-bottom: 28px;
+
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .sobre-mi p {
+    margin-bottom: 18px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+}

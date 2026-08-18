@@ -1,0 +1,324 @@
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: fixed;
+  top: 9px;
+  left: 50%;
+
+  z-index: 1000;
+
+  width: calc(100% - 40px);
+  max-width: 1150px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--verde),
+      #155348,
+      var(--verde)
+    );
+
+  border: 1px solid rgba(245, 241, 232, 0.12);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(23, 63, 53, 0.20);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+
+  padding: 18px 26px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo a {
+  color: var(--crema);
+
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  color: var(--amarillo);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  padding: 5px 0;
+
+  color: var(--crema);
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* =========================
+   INDICADOR
+========================= */
+
+.navbar-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background-color: var(--amarillo);
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--amarillo);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+
+.navbar-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: 1px solid rgba(245, 241, 232, 0.15);
+
+  border-radius: 12px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.navbar-toggle span {
+  display: block;
+
+  width: 21px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background-color: var(--crema);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  background-color: rgba(245, 241, 232, 0.08);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .header {
+    width: calc(100% - 30px);
+    top: 8px;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .navbar-links {
+    gap: 16px;
+  }
+
+  .navbar-links a {
+    font-size: 0.85rem;
+  }
+
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    top: 6px;
+
+    width: calc(100% - 24px);
+
+    border-radius: 16px;
+  }
+
+
+  /* =========================
+     NAVBAR
+  ========================= */
+
+  .navbar {
+    position: relative;
+
+    padding: 14px 16px;
+
+    flex-wrap: wrap;
+  }
+
+
+  /* =========================
+     LOGO
+  ========================= */
+
+  .navbar-logo a {
+    font-size: 1.1rem;
+  }
+
+
+  /* =========================
+     BOTÓN
+  ========================= */
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+
+  /* =========================
+     MENÚ
+  ========================= */
+
+  .navbar-links {
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      padding 0.35s ease;
+  }
+
+
+  /* =========================
+     MENÚ ABIERTO
+  ========================= */
+
+  .navbar-links--abierto {
+    max-height: 300px;
+
+    padding: 15px 0 8px;
+
+    opacity: 1;
+  }
+
+
+  /* =========================
+     ENLACES
+  ========================= */
+
+  .navbar-links a {
+    width: 100%;
+
+    padding: 11px 0;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+  }
+
+
+  /* =========================
+     INDICADOR
+  ========================= */
+
+  .navbar-links a::after {
+    bottom: 4px;
+  }
+
+}
+

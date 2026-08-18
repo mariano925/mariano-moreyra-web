@@ -1,0 +1,283 @@
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 150px 30px 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(23, 107, 135, 0.14),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(217, 93, 79, 0.08),
+      transparent 40%
+    ),
+    var(--crema);
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.hero-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: var(--coral);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.hero-title {
+  max-width: 950px;
+
+  margin-bottom: 30px;
+
+  font-size: clamp(3.5rem, 8vw, 7rem);
+
+  line-height: 0.95;
+
+  color: var(--verde);
+}
+
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.hero-description {
+  max-width: 650px;
+
+  margin-bottom: 20px;
+
+  font-size: 1.25rem;
+
+  line-height: 1.6;
+
+  color: var(--texto-suave);
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.hero-services {
+  margin-bottom: 35px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  line-height: 1.6;
+
+  color: var(--azul);
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  position: relative;
+
+  padding: 13px 26px;
+
+  border: 2px solid var(--verde);
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: var(--crema);
+
+  background-color: var(--verde);
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.hero-buttons a:hover {
+  color: var(--verde);
+
+  background-color: var(--amarillo);
+
+  border-color: var(--amarillo);
+
+  transform:
+    translateY(-4px)
+    rotate(-1.5deg);
+}
+
+
+/* =========================
+   SEGUNDO BOTÓN
+========================= */
+
+.hero-buttons a:last-child {
+  color: var(--verde);
+
+  background-color: transparent;
+}
+
+.hero-buttons a:last-child:hover {
+  color: var(--crema);
+
+  background-color: var(--coral);
+
+  border-color: var(--coral);
+
+  transform:
+    translateY(-4px)
+    rotate(1.5deg);
+}
+
+
+/* =========================
+   HERO - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 140px 24px 90px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 9vw, 5.5rem);
+  }
+
+}
+
+
+/* =========================
+   HERO - MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: auto;
+
+    padding: 125px 20px 80px;
+  }
+
+
+  /* =========================
+     SUBTÍTULO
+  ========================= */
+
+  .hero-subtitle {
+    margin-bottom: 16px;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* =========================
+     TÍTULO
+  ========================= */
+
+  .hero-title {
+    max-width: 100%;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+
+    line-height: 0.95;
+  }
+
+
+  /* =========================
+     DESCRIPCIÓN
+  ========================= */
+
+  .hero-description {
+    max-width: 100%;
+
+    margin-bottom: 18px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     SERVICIOS
+  ========================= */
+
+  .hero-services {
+    margin-bottom: 30px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================
+     BOTONES
+  ========================= */
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    padding: 13px 24px;
+  }
+
+}
+

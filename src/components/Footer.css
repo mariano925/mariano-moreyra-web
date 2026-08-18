@@ -1,0 +1,172 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 75px 30px 25px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(23, 107, 135, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      var(--verde),
+      #12352D
+    );
+
+  color: var(--crema);
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.footer-contenido {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 60px;
+}
+
+/* =========================
+   IDENTIDAD
+========================= */
+
+.footer-logo h3 {
+  margin-bottom: 8px;
+
+  font-size: 1.3rem;
+
+  color: var(--crema);
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+
+  color: rgba(245, 241, 232, 0.65);
+}
+
+/* =========================
+   ENLACES
+========================= */
+
+.footer-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 18px 28px;
+
+  max-width: 650px;
+}
+
+.footer-links > a,
+.footer-redes a {
+  position: relative;
+
+  color: var(--crema);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-links > a:hover,
+.footer-redes a:hover {
+  color: var(--amarillo);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   INDICADOR DE ENLACE
+========================= */
+
+.footer-links > a::after,
+.footer-redes a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -5px;
+
+  width: 0;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background-color: var(--coral);
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+.footer-links > a:hover::after,
+.footer-redes a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   REDES
+========================= */
+
+.footer-redes {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 20px;
+
+  margin-top: 15px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(245, 241, 232, 0.15);
+}
+
+/* =========================
+   PARTE INFERIOR
+========================= */
+
+.footer-bottom {
+  max-width: 1200px;
+
+  margin: 50px auto 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(245, 241, 232, 0.15);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 0.8rem;
+
+  color: rgba(245, 241, 232, 0.55);
+}

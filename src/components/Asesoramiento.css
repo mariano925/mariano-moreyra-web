@@ -1,0 +1,194 @@
+/* =========================
+   ASESORAMIENTO
+========================= */
+
+.asesoramiento {
+  padding: 120px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(23, 63, 53, 0.40),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(233, 185, 73, 0.08),
+      transparent 35%
+    ),
+    var(--azul);
+}
+
+.asesoramiento-contenido {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.asesoramiento-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: var(--amarillo);
+}
+
+.asesoramiento h2 {
+  max-width: 800px;
+
+  margin-bottom: 25px;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  line-height: 1.1;
+
+  color: var(--crema);
+}
+
+.asesoramiento-descripcion {
+  max-width: 700px;
+
+  margin-bottom: 60px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  color: rgba(245, 241, 232, 0.85);
+}
+
+/* =========================
+   LISTA
+========================= */
+
+.asesoramiento-lista {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+
+  counter-reset: asesoramiento;
+}
+
+/* =========================
+   ITEMS
+========================= */
+
+.asesoramiento-item {
+  position: relative;
+
+  padding: 32px 32px 32px 78px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(245, 241, 232, 0.12),
+      rgba(245, 241, 232, 0.05)
+    );
+
+  border: 1px solid rgba(245, 241, 232, 0.18);
+
+  border-radius: 22px;
+
+  counter-increment: asesoramiento;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.10);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.asesoramiento-item:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(245, 241, 232, 0.17),
+      rgba(245, 241, 232, 0.07)
+    );
+
+  border-color: rgba(233, 185, 73, 0.50);
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================
+   NÚMERO
+========================= */
+
+.asesoramiento-item::before {
+  content: counter(asesoramiento);
+
+  position: absolute;
+
+  top: 30px;
+
+  left: 25px;
+
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: var(--amarillo);
+
+  color: var(--verde);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.asesoramiento-item:hover::before {
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.asesoramiento-item h3 {
+  margin-bottom: 10px;
+
+  font-size: 1.2rem;
+
+  color: var(--crema);
+}
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.asesoramiento-item p {
+  line-height: 1.6;
+
+  color: rgba(245, 241, 232, 0.75);
+}

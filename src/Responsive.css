@@ -1,0 +1,245 @@
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  /* =========================
+     SERVICIOS
+  ========================= */
+
+  .servicios-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* =========================
+     ASESORAMIENTO
+  ========================= */
+
+  .asesoramiento-lista {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     PROYECTOS
+  ========================= */
+
+  .proyectos-lista {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* =========================
+     TECNOLOGÍAS
+  ========================= */
+
+  .tecnologias-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   RESPONSIVE - MÓVIL
+========================= */
+
+@media (max-width: 600px) {
+
+  /* =========================
+     SECCIONES
+  ========================= */
+
+  .servicios,
+  .asesoramiento,
+  .proyectos,
+  .tecnologias,
+  .contacto,
+  .sobre-mi {
+    padding: 90px 20px;
+  }
+
+
+  /* =========================
+     CONTENEDORES
+  ========================= */
+
+  .servicios-contenido,
+  .asesoramiento-contenido,
+  .proyectos-contenido,
+  .tecnologias-contenido,
+  .contacto-contenido,
+  .sobre-mi-contenido {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* =========================
+     TÍTULOS
+  ========================= */
+
+  .servicios h2,
+  .asesoramiento h2,
+  .proyectos h2,
+  .tecnologias h2,
+  .contacto h2,
+  .sobre-mi h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+
+  /* =========================
+     SERVICIOS
+  ========================= */
+
+  .servicios-lista {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+
+  /* =========================
+     ASESORAMIENTO
+  ========================= */
+
+  .asesoramiento-lista {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .asesoramiento-item {
+    padding: 25px 20px 25px 65px;
+  }
+
+
+  /* =========================
+     PROYECTOS
+  ========================= */
+
+  .proyectos-lista {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .proyecto-info {
+    padding: 25px;
+  }
+
+  .proyecto-links {
+    flex-wrap: wrap;
+  }
+
+
+  /* =========================
+     TECNOLOGÍAS
+  ========================= */
+
+  .tecnologias-lista {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  /* =========================
+     CONTACTO
+  ========================= */
+
+  .contacto-form {
+    padding: 25px;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    min-height: auto;
+    padding: 150px 20px 100px;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    margin-bottom: 30px;
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .hero-services {
+    margin-bottom: 35px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    gap: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons a {
+    width: auto;
+    padding: 13px 24px;
+  }
+
+
+  /* =========================
+     FOOTER
+  ========================= */
+
+  .footer {
+    padding: 70px 20px 25px;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-links {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 20px;
+  }
+
+  .footer-redes {
+    justify-content: flex-start;
+    margin-top: 5px;
+    padding-top: 20px;
+  }
+
+  .footer-bottom {
+    margin-top: 45px;
+    padding-top: 20px;
+  }
+
+  .footer-bottom p {
+    line-height: 1.5;
+  }
+
+}
+

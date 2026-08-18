@@ -1,0 +1,35 @@
+:root {
+  --crema: #F5F1E8;
+  --verde: #173F35;
+  --azul: #176B87;
+  --coral: #D95D4F;
+  --amarillo: #E9B949;
+  --texto-suave: #53635F;
+
+  --degradado-principal:
+    linear-gradient(
+      135deg,
+      var(--verde),
+      var(--azul)
+    );
+
+  --degradado-acento:
+    linear-gradient(
+      135deg,
+      var(--coral),
+      var(--amarillo)
+    );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}

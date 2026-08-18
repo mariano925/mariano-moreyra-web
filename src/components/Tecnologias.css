@@ -1,0 +1,209 @@
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.tecnologias {
+  padding: 120px 30px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(23, 107, 135, 0.07),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(233, 185, 73, 0.07),
+      transparent 35%
+    ),
+    var(--crema);
+}
+
+.tecnologias-contenido {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.tecnologias-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: var(--coral);
+}
+
+.tecnologias h2 {
+  max-width: 750px;
+
+  margin-bottom: 60px;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  line-height: 1.1;
+
+  color: var(--verde);
+}
+
+/* =========================
+   LISTA
+========================= */
+
+.tecnologias-lista {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tecnologia {
+  position: relative;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #FAF8F3,
+      #F0ECE3
+    );
+
+  border: 1px solid rgba(23, 63, 53, 0.10);
+
+  border-radius: 18px;
+
+  box-shadow:
+    6px 8px 18px rgba(23, 63, 53, 0.07);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tecnologia:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--azul);
+
+  box-shadow:
+    0 14px 28px rgba(23, 107, 135, 0.14);
+}
+
+/* =========================
+   INDICADOR
+========================= */
+
+.tecnologia::before {
+  content: "";
+
+  display: block;
+
+  width: 10px;
+
+  height: 10px;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background-color: var(--azul);
+
+  box-shadow:
+    0 0 0 5px rgba(23, 107, 135, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tecnologia:hover::before {
+  transform: scale(1.2);
+
+  box-shadow:
+    0 0 0 7px rgba(23, 107, 135, 0.10);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.tecnologia h3 {
+  margin-bottom: 10px;
+
+  font-size: 1.2rem;
+
+  color: var(--verde);
+}
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.tecnologia p {
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+
+  color: var(--texto-suave);
+}
+
+/* =========================
+   VARIACIONES
+========================= */
+
+.tecnologia:nth-child(2)::before {
+  background-color: var(--coral);
+
+  box-shadow:
+    0 0 0 5px rgba(217, 93, 79, 0.08);
+}
+
+.tecnologia:nth-child(3)::before {
+  background-color: var(--amarillo);
+
+  box-shadow:
+    0 0 0 5px rgba(233, 185, 73, 0.10);
+}
+
+.tecnologia:nth-child(4)::before {
+  background-color: var(--azul);
+}
+
+.tecnologia:nth-child(5)::before {
+  background-color: var(--coral);
+
+  box-shadow:
+    0 0 0 5px rgba(217, 93, 79, 0.08);
+}
+
+.tecnologia:nth-child(6)::before {
+  background-color: var(--amarillo);
+
+  box-shadow:
+    0 0 0 5px rgba(233, 185, 73, 0.10);
+}
+
+.tecnologia:nth-child(7)::before {
+  background-color: var(--azul);
+}
+
+.tecnologia:nth-child(8)::before {
+  background-color: var(--coral);
+
+  box-shadow:
+    0 0 0 5px rgba(217, 93, 79, 0.08);
+}
