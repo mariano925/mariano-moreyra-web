@@ -17,6 +17,10 @@ function Hero() {
         proyectos que quieren tener su lugar en internet.
       </p>
 
+      <p className="hero-location">
+        Desde Gualeguay, Entre Ríos, para proyectos locales y a distancia.
+      </p>
+
       <p className="hero-services">
         Landing pages · Sitios institucionales · Catálogos online
       </p>
