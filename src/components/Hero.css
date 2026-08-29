@@ -1,295 +1,332 @@
-
 /* =========================
-   HERO
+HERO
 ========================= */
 
 .hero {
-  min-height: 100vh;
+position: relative;
 
-  max-width: 1200px;
+min-height: 100vh;
 
-  margin: 0 auto;
+margin: 0 auto;
 
-  padding: 150px 30px 100px;
+padding: 150px 30px 100px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 
-  box-sizing: border-box;
+box-sizing: border-box;
 
-  background:
-    radial-gradient(
-      circle at 75% 35%,
-      rgba(23, 107, 135, 0.14),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 20% 70%,
-      rgba(217, 93, 79, 0.08),
-      transparent 40%
-    ),
-    var(--crema);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+overflow: hidden;
 }
 
+/* =========================
+CAPA SOBRE LA IMAGEN
+========================= */
+
+.hero::before {
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background: rgba(0, 0, 0, 0.45);
+
+z-index: 0;
+}
 
 /* =========================
-   SUBTÍTULO
+CONTENIDO DEL HERO
+========================= */
+
+.hero > * {
+position: relative;
+
+z-index: 1;
+}
+
+/* =========================
+SUBTÍTULO
 ========================= */
 
 .hero-subtitle {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 
-  font-size: 0.85rem;
-  font-weight: 700;
+font-size: 0.85rem;
+font-weight: 700;
 
-  letter-spacing: 3px;
+letter-spacing: 3px;
 
-  color: var(--coral);
+color: #f5f5f5;
 }
 
-
 /* =========================
-   TÍTULO
+TÍTULO
 ========================= */
 
 .hero-title {
-  max-width: 950px;
+max-width: 950px;
 
-  margin-bottom: 30px;
+margin-bottom: 30px;
 
-  font-size: clamp(3.5rem, 8vw, 7rem);
+font-size: clamp(3.5rem, 8vw, 7rem);
 
-  line-height: 0.95;
+line-height: 0.95;
 
-  color: var(--verde);
+color: #f5f5f5;
 }
 
-
 /* =========================
-   DESCRIPCIÓN
+DESCRIPCIÓN
 ========================= */
 
 .hero-description {
-  max-width: 650px;
+max-width: 650px;
 
-  margin-bottom: 20px;
+margin-bottom: 20px;
 
-  font-size: 1.25rem;
+font-size: 1.25rem;
 
-  line-height: 1.6;
+line-height: 1.6;
 
-  color: var(--texto-suave);
+color: #f5f5f5;
 }
 
+/* =========================
+UBICACIÓN
+========================= */
+
+.hero-location {
+margin-bottom: 20px;
+
+font-size: 0.85rem;
+font-weight: 500;
+
+color: #f5f5f5;
+}
 
 /* =========================
-   SERVICIOS
+SERVICIOS
 ========================= */
 
 .hero-services {
-  margin-bottom: 35px;
+margin-bottom: 35px;
 
-  font-size: 0.95rem;
-  font-weight: 600;
+font-size: 0.95rem;
+font-weight: 600;
 
-  line-height: 1.6;
+line-height: 1.6;
 
-  color: var(--azul);
+color: var(--azul);
 }
 
-
 /* =========================
-   BOTONES
+BOTONES
 ========================= */
 
 .hero-buttons {
-  display: flex;
+display: flex;
 
-  gap: 16px;
+gap: 16px;
 
-  flex-wrap: wrap;
+flex-wrap: wrap;
 }
 
 .hero-buttons a {
-  position: relative;
+position: relative;
 
-  padding: 13px 26px;
+padding: 13px 26px;
 
-  border: 2px solid var(--verde);
+border: 2px solid var(--verde);
 
-  border-radius: 50px;
+border-radius: 50px;
 
-  text-decoration: none;
+text-decoration: none;
 
-  font-size: 0.95rem;
-  font-weight: 600;
+font-size: 0.95rem;
+font-weight: 600;
 
-  color: var(--crema);
+color: var(--crema);
 
-  background-color: var(--verde);
+background-color: var(--verde);
 
-  transition:
-    transform 0.35s ease,
-    background-color 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease;
+transition:
+transform 0.35s ease,
+background-color 0.35s ease,
+color 0.35s ease,
+border-color 0.35s ease,
+box-shadow 0.35s ease;
 }
 
-
 /* =========================
-   HOVER
+HOVER
 ========================= */
 
-.hero-buttons a:hover {
-  color: var(--verde);
+.hero-buttons a {
+color: var(--verde);
 
-  background-color: var(--amarillo);
+background-color: var(--amarillo);
 
-  border-color: var(--amarillo);
+border-color: var(--amarillo);
 
-  transform:
-    translateY(-4px)
-    rotate(-1.5deg);
+transform:
+translateY(-6px)
+scale(1.03)
+rotate(-1.5deg);
+
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-
 /* =========================
-   SEGUNDO BOTÓN
+SEGUNDO BOTÓN
 ========================= */
+
+.hero-buttons a {
+color: var(--verde);
+
+background-color: transparent;
+}
 
 .hero-buttons a:last-child {
-  color: var(--verde);
+color: var(--crema);
 
-  background-color: transparent;
+background-color: var(--coral);
+
+border-color: var(--coral);
+
+transform:
+translateY(-6px)
+scale(1.03)
+rotate(1.5deg);
+
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
-.hero-buttons a:last-child:hover {
-  color: var(--crema);
-
-  background-color: var(--coral);
-
-  border-color: var(--coral);
-
-  transform:
-    translateY(-4px)
-    rotate(1.5deg);
-}
-
 
 /* =========================
-   HERO - TABLET
+HERO - TABLET
 ========================= */
 
 @media (max-width: 900px) {
 
-  .hero {
-    padding: 140px 24px 90px;
-  }
+.hero {
+padding: 140px 24px 90px;
 
-  .hero-title {
-    font-size: clamp(3.2rem, 9vw, 5.5rem);
-  }
+background-position: center;
 
 }
 
+.hero-title {
+font-size: clamp(3.2rem, 9vw, 5.5rem);
+}
+
+}
 
 /* =========================
-   HERO - MÓVIL
+HERO - MÓVIL
 ========================= */
 
 @media (max-width: 600px) {
 
-  .hero {
-    min-height: auto;
+.hero {
+min-height: 100vh;
 
-    padding: 125px 20px 80px;
-  }
+padding: 125px 20px 80px;
 
-
-  /* =========================
-     SUBTÍTULO
-  ========================= */
-
-  .hero-subtitle {
-    margin-bottom: 16px;
-
-    font-size: 0.75rem;
-
-    letter-spacing: 2px;
-  }
-
-
-  /* =========================
-     TÍTULO
-  ========================= */
-
-  .hero-title {
-    max-width: 100%;
-
-    margin-bottom: 25px;
-
-    font-size: clamp(2.8rem, 14vw, 4.5rem);
-
-    line-height: 0.95;
-  }
-
-
-  /* =========================
-     DESCRIPCIÓN
-  ========================= */
-
-  .hero-description {
-    max-width: 100%;
-
-    margin-bottom: 18px;
-
-    font-size: 1.05rem;
-
-    line-height: 1.6;
-  }
-
-
-  /* =========================
-     SERVICIOS
-  ========================= */
-
-  .hero-services {
-    margin-bottom: 30px;
-
-    font-size: 0.9rem;
-
-    line-height: 1.6;
-  }
-
-
-  /* =========================
-     BOTONES
-  ========================= */
-
-  .hero-buttons {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 12px;
-  }
-
-  .hero-buttons a {
-    padding: 13px 24px;
-  }
+background-position: center;
 
 }
 
 /* =========================
-   UBICACIÓN
+SUBTÍTULO
+========================= */
+
+.hero-subtitle {
+margin-bottom: 16px;
+
+font-size: 0.75rem;
+
+letter-spacing: 2px;
+
+}
+
+/* =========================
+TÍTULO
+========================= */
+
+.hero-title {
+max-width: 100%;
+
+margin-bottom: 25px;
+
+font-size: clamp(2.8rem, 14vw, 4.5rem);
+
+line-height: 0.95;
+
+}
+
+/* =========================
+DESCRIPCIÓN
+========================= */
+
+.hero-description {
+max-width: 100%;
+
+margin-bottom: 18px;
+
+font-size: 1.05rem;
+
+line-height: 1.6;
+
+}
+
+/* =========================
+UBICACIÓN
 ========================= */
 
 .hero-location {
-  margin-bottom: 20px;
+margin-bottom: 18px;
 
-  font-size: 0.85rem;
-  font-weight: 500;
+font-size: 0.8rem;
 
-  color: var(--texto-suave);
+line-height: 1.5;
+
+color: #f5f5f5;
+
+}
+
+/* =========================
+SERVICIOS
+========================= */
+
+.hero-services {
+margin-bottom: 30px;
+
+font-size: 0.9rem;
+
+line-height: 1.6;
+
+}
+
+/* =========================
+BOTONES
+========================= */
+
+.hero-buttons {
+flex-direction: column;
+
+align-items: flex-start;
+
+gap: 12px;
+
+}
+
+.hero-buttons a {
+padding: 13px 24px;
+}
+
 }
