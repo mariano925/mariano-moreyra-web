@@ -138,6 +138,8 @@ flex-wrap: wrap;
 }
 
 .hero-buttons a {
+display: inline-block;
+
 position: relative;
 
 padding: 13px 26px;
@@ -167,7 +169,7 @@ box-shadow 0.35s ease;
 HOVER
 ========================= */
 
-.hero-buttons a {
+.hero-buttons a:hover {
 color: var(--verde);
 
 background-color: var(--amarillo);
@@ -186,13 +188,13 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 SEGUNDO BOTÓN
 ========================= */
 
-.hero-buttons a {
+.hero-buttons a:last-child {
 color: var(--verde);
 
 background-color: transparent;
 }
 
-.hero-buttons a:last-child {
+.hero-buttons a:last-child:hover {
 color: var(--crema);
 
 background-color: var(--coral);
@@ -216,7 +218,9 @@ HERO - TABLET
 .hero {
 padding: 140px 24px 90px;
 
+
 background-position: center;
+
 
 }
 
@@ -235,9 +239,11 @@ HERO - MÓVIL
 .hero {
 min-height: 100vh;
 
+
 padding: 125px 20px 80px;
 
 background-position: center;
+
 
 }
 
@@ -248,9 +254,11 @@ SUBTÍTULO
 .hero-subtitle {
 margin-bottom: 16px;
 
+
 font-size: 0.75rem;
 
 letter-spacing: 2px;
+
 
 }
 
@@ -261,11 +269,13 @@ TÍTULO
 .hero-title {
 max-width: 100%;
 
+
 margin-bottom: 25px;
 
 font-size: clamp(2.8rem, 14vw, 4.5rem);
 
 line-height: 0.95;
+
 
 }
 
@@ -276,11 +286,13 @@ DESCRIPCIÓN
 .hero-description {
 max-width: 100%;
 
+
 margin-bottom: 18px;
 
 font-size: 1.05rem;
 
 line-height: 1.6;
+
 
 }
 
@@ -291,11 +303,13 @@ UBICACIÓN
 .hero-location {
 margin-bottom: 18px;
 
+
 font-size: 0.8rem;
 
 line-height: 1.5;
 
 color: #f5f5f5;
+
 
 }
 
@@ -306,9 +320,11 @@ SERVICIOS
 .hero-services {
 margin-bottom: 30px;
 
+
 font-size: 0.9rem;
 
 line-height: 1.6;
+
 
 }
 
@@ -319,9 +335,11 @@ BOTONES
 .hero-buttons {
 flex-direction: column;
 
+
 align-items: flex-start;
 
 gap: 12px;
+
 
 }
 
