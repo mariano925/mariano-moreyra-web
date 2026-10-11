@@ -1,11 +1,14 @@
 import "./Contacto.css"
 
 function Contacto() {
+  const telefono = "5491139384849"
+  const mensaje = encodeURIComponent(
+    "Hola Mariano, vi tu portfolio y quisiera consultar por un proyecto web."
+  )
+
   return (
     <section className="contacto" id="contacto">
-
       <div className="contacto-contenido">
-
         <p className="contacto-subtitle">
           CONTACTO
         </p>
@@ -15,53 +18,61 @@ function Contacto() {
         </h2>
 
         <p className="contacto-descripcion">
-          Contame qué tenés en mente, aunque todavía sea solo una idea,
-          y podemos conversar sobre la mejor forma de llevarla a la web.
+          Contame qué tenés en mente, aunque todavía sea solo una idea.
+          Podemos conversar sobre cómo llevarla a la web.
         </p>
 
-        <form className="contacto-form">
+        <div className="contacto-whatsapp">
+          <h3>Hablemos por WhatsApp</h3>
 
-          <div className="campo">
-            <label htmlFor="nombre">Nombre</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Tu nombre"
-            />
-          </div>
+          <p>
+            Escribime directamente para contarme tu idea o consultar
+            por mis servicios de desarrollo web.
+          </p>
 
-          <div className="campo">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="tu@email.com"
-            />
-          </div>
+          <a
+            className="contacto-boton-whatsapp"
+            href={`https://wa.me/${telefono}?text=${mensaje}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar a Mariano por WhatsApp"
+          >
+            Contactarme por WhatsApp
+          </a>
 
-          <div className="campo">
-            <label htmlFor="mensaje">Mensaje</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="6"
-              placeholder="Contame sobre tu idea o proyecto..."
-            ></textarea>
-          </div>
+          <p className="contacto-telefono">
+            WhatsApp: +54 3444 634392
+          </p>
+        </div>
 
-          <button type="submit">
-            Enviar mensaje
-          </button>
+        <div className="contacto-en-construccion">
+          <h3>Formulario de contacto</h3>
 
-        </form>
+          <p>
+            Esta sección está en construcción. Por el momento,
+            podés contactarme directamente por WhatsApp.
+          </p>
 
+          <span className="contacto-estado">
+            En construcción
+          </span>
+        </div>
+
+        <div className="contacto-instagram">
+          <h3>Instagram</h3>
+
+          <p>
+            Mi espacio profesional en Instagram estará disponible
+            próximamente.
+          </p>
+
+          <span className="contacto-estado">
+            Próximamente
+          </span>
+        </div>
       </div>
-
     </section>
   )
 }
 
 export default Contacto
-

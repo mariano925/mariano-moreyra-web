@@ -1,52 +1,107 @@
 <!doctype html>
-<html lang="es">
-
+<html lang="es-AR">
   <head>
-
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <title>Desarrollo web en Gualeguay | Mariano Moreyra</title>
 
     <meta
       name="description"
-      content="Mariano Moreyra crea sitios web modernos, claros y funcionales para personas y proyectos que quieren tener su lugar en internet."
+      content="Desarrollo web para comercios, profesionales y emprendimientos de Gualeguay, General Galarza, General Enrique Carbó y toda Argentina."
     />
 
-    <title>
-      Mariano Moreyra | Sitios web para cada proyecto
-    </title>
+    <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
+    <link
+      rel="canonical"
+      href="https://mariano-moreyra-web.vercel.app/"
+    />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph: vistas previas al compartir -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta
+      property="og:site_name"
+      content="Mariano Moreyra - Desarrollo Web"
+    />
     <meta
       property="og:title"
-      content="Mariano Moreyra | Sitios web para cada proyecto"
+      content="Desarrollo web en Gualeguay | Mariano Moreyra"
     />
-
     <meta
       property="og:description"
-      content="Creo sitios web modernos, claros y funcionales para personas y proyectos que quieren tener su lugar en internet."
+      content="Sitios web para comercios, profesionales y emprendimientos de Gualeguay, localidades cercanas y toda Argentina."
     />
-
     <meta
-      property="og:type"
-      content="website"
+      property="og:url"
+      content="https://mariano-moreyra-web.vercel.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://mariano-moreyra-web.vercel.app/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1101" />
+    <meta property="og:image:height" content="614" />
+    <meta
+      property="og:image:alt"
+      content="Mariano Moreyra - Desarrollo web en Gualeguay"
     />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Desarrollo web en Gualeguay | Mariano Moreyra"
+    />
+    <meta
+      name="twitter:description"
+      content="Sitios web para comercios, profesionales y emprendimientos de Gualeguay y toda Argentina."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mariano-moreyra-web.vercel.app/og-image.jpg"
+    />
+
+    <!-- Datos estructurados para servicios profesionales -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Mariano Moreyra - Desarrollo Web",
+        "url": "https://mariano-moreyra-web.vercel.app/",
+        "image": "https://mariano-moreyra-web.vercel.app/og-image.jpg",
+        "description": "Desarrollo de sitios web, páginas de presentación, sitios institucionales y catálogos digitales para comercios, profesionales y emprendimientos.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Gualeguay"
+          },
+          {
+            "@type": "City",
+            "name": "General Galarza"
+          },
+          {
+            "@type": "City",
+            "name": "General Enrique Carbó"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Entre Ríos"
+          },
+          {
+            "@type": "Country",
+            "name": "Argentina"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
-
     <div id="root"></div>
-
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
-
+    <script type="module" src="/src/main.jsx"></script>
   </body>
-
 </html>

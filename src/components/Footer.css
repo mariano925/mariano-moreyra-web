@@ -207,3 +207,78 @@
 
   transform: translateY(-2px);
 }
+
+
+/* =========================
+   INSTAGRAM PRÓXIMAMENTE
+========================= */
+
+.footer-redes {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-red-proximamente {
+  color: rgba(245, 241, 232, 0.65);
+  font-size: 0.9rem;
+  cursor: default;
+}
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+.footer-links a:focus-visible,
+.footer-redes a:focus-visible,
+.footer-precios a:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 22px 24px;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+    gap: 18px 24px;
+  }
+
+  .footer-redes {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .footer-precios {
+    margin-top: 0;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-links > a,
+  .footer-redes a,
+  .footer-precios a {
+    transition: none;
+  }
+
+  .footer-links > a:hover,
+  .footer-redes a:hover,
+  .footer-precios a:hover {
+    transform: none;
+  }
+}

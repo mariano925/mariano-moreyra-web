@@ -21,7 +21,6 @@
 
 .contacto-contenido {
   max-width: 900px;
-
   margin: 0 auto;
 }
 
@@ -31,191 +30,159 @@
 
 .contacto-subtitle {
   margin-bottom: 20px;
-
   font-size: 0.85rem;
-
   font-weight: 700;
-
   letter-spacing: 3px;
-
   color: var(--amarillo);
 }
 
 .contacto h2 {
   max-width: 800px;
-
   margin-bottom: 25px;
-
   font-size: clamp(2.3rem, 5vw, 4rem);
-
   line-height: 1.1;
-
   color: var(--crema);
 }
 
 .contacto-descripcion {
   max-width: 650px;
-
-  margin-bottom: 55px;
-
+  margin-bottom: 45px;
   font-size: 1.1rem;
-
   line-height: 1.7;
-
   color: rgba(245, 241, 232, 0.9);
 }
 
 /* =========================
-   FORMULARIO
+   BLOQUES DE CONTACTO
 ========================= */
 
-.contacto-form {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 25px;
-
-  padding: 42px;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--crema),
-      #EDE7DC
-    );
-
-  border-radius: 28px;
-
-  box-shadow:
-    15px 18px 35px rgba(23, 63, 53, 0.20),
-    -8px -8px 20px rgba(255, 255, 255, 0.12);
+.contacto-whatsapp,
+.contacto-en-construccion,
+.contacto-instagram {
+  padding: 32px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(23, 63, 53, 0.12);
+  border-radius: 24px;
+  background: linear-gradient(145deg, var(--crema), #EDE7DC);
+  box-shadow: 0 12px 28px rgba(23, 63, 53, 0.12);
 }
 
-/* =========================
-   CAMPOS
-========================= */
-
-.campo {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 8px;
-}
-
-.campo label {
-  font-size: 0.9rem;
-
-  font-weight: 700;
-
+.contacto h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  line-height: 1.3;
   color: var(--verde);
 }
 
-.campo input,
-.campo textarea {
-  width: 100%;
-
-  padding: 15px 17px;
-
-  border: 2px solid rgba(23, 63, 53, 0.12);
-
-  border-radius: 14px;
-
-  background-color: #FAF8F3;
-
-  color: var(--verde);
-
-  font-family: inherit;
-
+.contacto-whatsapp p,
+.contacto-en-construccion p,
+.contacto-instagram p {
+  margin: 0 0 20px;
   font-size: 1rem;
-
-  outline: none;
-
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
-}
-
-.campo input:hover,
-.campo textarea:hover {
-  border-color: rgba(23, 107, 135, 0.30);
-}
-
-.campo textarea {
-  resize: vertical;
-
-  min-height: 140px;
-}
-
-/* =========================
-   FOCUS
-========================= */
-
-.campo input:focus,
-.campo textarea:focus {
-  border-color: var(--azul);
-
-  background-color: #FFFFFF;
-
-  box-shadow:
-    0 0 0 4px rgba(23, 107, 135, 0.12);
-}
-
-/* =========================
-   BOTÓN
-========================= */
-
-.contacto-form button {
-  align-self: flex-start;
-
-  padding: 14px 30px;
-
-  border: none;
-
-  border-radius: 50px;
-
-  background-color: var(--verde);
-
-  color: var(--crema);
-
-  font-family: inherit;
-
-  font-size: 0.95rem;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.contacto-form button:hover {
-  background-color: var(--amarillo);
-
+  line-height: 1.7;
   color: var(--verde);
-
-  transform:
-    translateY(-4px)
-    rotate(-1deg);
-
-  box-shadow:
-    0 8px 18px rgba(23, 63, 53, 0.18);
 }
 
 /* =========================
-   ACCESIBILIDAD
+   WHATSAPP
 ========================= */
 
-.contacto-form button:focus-visible,
-.campo input:focus-visible,
-.campo textarea:focus-visible {
-  outline: 3px solid rgba(233, 185, 73, 0.55);
+.contacto-boton-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 24px;
+  border: 2px solid var(--verde);
+  border-radius: 50px;
+  background-color: var(--verde);
+  color: var(--crema);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-  outline-offset: 3px;
+.contacto-boton-whatsapp:hover {
+  transform: translateY(-2px);
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  color: var(--verde);
+  box-shadow: 0 8px 18px rgba(23, 63, 53, 0.15);
+}
+
+.contacto-boton-whatsapp:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 4px;
+}
+
+.contacto .contacto-telefono {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.contacto-estado {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid rgba(23, 63, 53, 0.18);
+  border-radius: 50px;
+  background-color: rgba(23, 63, 53, 0.06);
+  color: var(--verde);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .contacto {
+    padding: 80px 20px;
+  }
+
+  .contacto h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .contacto-descripcion {
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+
+  .contacto-whatsapp,
+  .contacto-en-construccion,
+  .contacto-instagram {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .contacto-boton-whatsapp {
+    width: 100%;
+    padding: 14px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contacto-boton-whatsapp {
+    transition: none;
+  }
+
+  .contacto-boton-whatsapp:hover {
+    transform: none;
+  }
 }
