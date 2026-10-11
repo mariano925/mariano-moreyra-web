@@ -1,258 +1,280 @@
-/* =========================
-   PROYECTOS
-========================= */
 
 .proyectos {
-  padding: 120px 30px;
-
-  background:
-    radial-gradient(
-      circle at 15% 15%,
-      rgba(23, 107, 135, 0.25),
-      transparent 38%
-    ),
-    radial-gradient(
-      circle at 90% 85%,
-      rgba(217, 93, 79, 0.10),
-      transparent 35%
-    ),
-    var(--verde);
+  background: var(--verde);
+  color: var(--crema);
+  padding: 100px 40px;
 }
 
 .proyectos-contenido {
   max-width: 1200px;
-
   margin: 0 auto;
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
-
 .proyectos-subtitle {
-  margin-bottom: 20px;
-
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
+  margin-bottom: 18px;
   color: var(--amarillo);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .proyectos h2 {
-  max-width: 800px;
-
-  margin-bottom: 60px;
-
-  font-size: clamp(2.2rem, 5vw, 4rem);
-
+  max-width: 850px;
+  margin: 0 0 24px;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   line-height: 1.1;
-
-  color: var(--crema);
+  text-wrap: balance;
 }
 
-/* =========================
-   LISTA
-========================= */
+.proyectos-descripcion {
+  max-width: 650px;
+  margin-bottom: 48px;
+  color: var(--crema);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
 
 .proyectos-lista {
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 35px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
 }
 
-/* =========================
-   TARJETAS
-========================= */
-
 .proyecto {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--crema),
-      #EDE7DC
-    );
-
-  border-radius: 24px;
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.12);
-
+  background: linear-gradient(135deg, var(--crema), #e8dfd0);
+  color: var(--verde);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .proyecto:hover {
-  transform: translateY(-9px);
-
-  box-shadow:
-    0 22px 45px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgb(0 0 0 / 15%);
 }
-
-/* =========================
-   IMAGEN
-========================= */
 
 .proyecto-imagen {
-  height: 260px;
-
   display: flex;
-
-  justify-content: center;
-
   align-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--azul),
-      var(--verde)
-    );
-
-  overflow: hidden;
-
-  position: relative;
-}
-
-.proyecto-imagen::after {
-  content: "";
-
-  position: absolute;
-
-  width: 180px;
-
-  height: 180px;
-
-  border-radius: 50%;
-
+  justify-content: center;
+  min-height: 230px;
+  padding: 20px;
   background:
     radial-gradient(
-      circle,
-      rgba(233, 185, 73, 0.20),
-      transparent 70%
-    );
-
-  top: -60px;
-
-  right: -40px;
-}
-
-.proyecto-imagen p {
-  position: relative;
-
-  z-index: 1;
-
+      circle at 80% 20%,
+      rgb(255 255 255 / 13%),
+      transparent 35%
+    ),
+    var(--azul);
   color: var(--crema);
-
-  font-size: 0.95rem;
-
-  font-weight: 600;
 }
 
-/* =========================
-   INFORMACIÓN
-========================= */
+.proyecto-imagen-2,
+.proyecto-imagen-5 {
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgb(255 255 255 / 12%),
+      transparent 40%
+    ),
+    var(--verde);
+}
+
+.proyecto-imagen-etiqueta {
+  padding: 10px 16px;
+  border: 1px dashed rgb(255 255 255 / 55%);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
 
 .proyecto-info {
-  padding: 32px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px;
 }
 
-.proyecto-info h3 {
-  margin-bottom: 15px;
-
-  font-size: 1.5rem;
-
-  color: var(--verde);
+.proyecto-categoria {
+  margin: 0 0 12px;
+  color: var(--coral);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.proyecto-info > p {
-  margin-bottom: 18px;
+.proyecto h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  line-height: 1.25;
+  text-wrap: balance;
+}
 
-  line-height: 1.7;
-
+.proyecto .proyecto-texto {
+  margin: 0 0 22px;
   color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
-
-/* =========================
-   TECNOLOGÍAS
-========================= */
 
 .proyecto-tecnologias {
-  font-size: 0.85rem;
-
-  font-weight: 700;
-
-  color: var(--coral) !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
 }
 
-/* =========================
-   ENLACES
-========================= */
+.proyecto-tecnologias li {
+  padding: 6px 10px;
+  border: 1px solid rgb(30 50 40 / 12%);
+  border-radius: 6px;
+  background: rgb(255 255 255 / 45%);
+  color: var(--verde);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
 
 .proyecto-links {
   display: flex;
-
-  gap: 12px;
-
-  margin-top: 28px;
-
   flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
 }
 
 .proyecto-links a {
-  padding: 11px 20px;
-
-  border-radius: 50px;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 16px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--verde);
   color: var(--crema);
-
-  background-color: var(--verde);
-
+  font-size: 0.85rem;
+  font-weight: 700;
   text-decoration: none;
-
-  font-size: 0.9rem;
-
-  font-weight: 600;
-
   transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease;
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .proyecto-links a:hover {
-  color: var(--verde);
-
-  background-color: var(--amarillo);
-
-  transform:
-    translateY(-3px)
-    rotate(-1deg);
+  transform: translateY(-2px);
+  background: var(--azul);
 }
 
-/* =========================
-   SEGUNDO ENLACE
-========================= */
-
-.proyecto-links a:last-child {
-  color: var(--verde);
-
-  background-color: transparent;
-
-  border: 2px solid var(--verde);
+.proyecto-links a:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
 }
 
-.proyecto-links a:last-child:hover {
+.proyecto-links .proyecto-link-secundario {
+  border-color: var(--verde);
+  background: transparent;
+  color: var(--verde);
+}
+
+.proyecto-links .proyecto-link-secundario:hover {
+  background: var(--verde);
   color: var(--crema);
+}
 
-  background-color: var(--coral);
+.proyecto-estado {
+  margin-left: auto;
+  color: var(--verde);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
 
-  border-color: var(--coral);
+.proyecto-estado-desarrollo {
+  color: #8a4a23;
+}
+
+@media (max-width: 800px) {
+  .proyectos {
+    padding: 80px 24px;
+  }
+
+  .proyectos-lista {
+    gap: 20px;
+  }
+
+  .proyecto-imagen {
+    min-height: 190px;
+  }
+
+  .proyecto-info {
+    padding: 22px;
+  }
+
+  .proyecto-estado {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .proyectos {
+    padding: 64px 18px;
+  }
+
+  .proyectos h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .proyectos-descripcion {
+    margin-bottom: 32px;
+    font-size: 0.98rem;
+  }
+
+  .proyectos-lista {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .proyecto-imagen {
+    min-height: 210px;
+  }
+
+  .proyecto-info {
+    padding: 24px 20px;
+  }
+
+  .proyecto h3 {
+    font-size: 1.45rem;
+  }
+
+  .proyecto-links a {
+    padding-inline: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proyecto,
+  .proyecto-links a {
+    transition: none;
+  }
+
+  .proyecto:hover,
+  .proyecto-links a:hover {
+    transform: none;
+  }
 }

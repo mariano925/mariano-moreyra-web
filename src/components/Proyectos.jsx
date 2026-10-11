@@ -1,179 +1,156 @@
+
 import "./Proyectos.css"
+
+const proyectos = [
+  {
+    nombre: "Frigotec",
+    categoria: "Proyecto para cliente",
+    titulo: "Sitio web — Frigotec",
+    descripcion:
+      "Sitio web para una empresa de refrigeración comercial, diseñado para presentar sus servicios, sectores de atención y canales de contacto de forma clara y profesional.",
+    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+    demo: "https://frigotec-web.vercel.app/",
+    estado: "Publicado",
+  },
+  {
+    nombre: "Service Refrigeración",
+    categoria: "Proyecto para cliente",
+    titulo: "Sitio web — Service Refrigeración",
+    descripcion:
+      "Sitio web de servicios de refrigeración y aire acondicionado, con información orientada a facilitar la consulta de servicios y el contacto con el negocio.",
+    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+    demo: "https://www.service-heladerasrch.com.ar/",
+    github: "https://github.com/mariano925/service-refrigeracion-react",
+    estado: "Publicado",
+  },
+  {
+    nombre: "MeteoGlass",
+    categoria: "Proyecto personal",
+    titulo: "Aplicación del clima — MeteoGlass",
+    descripcion:
+      "Aplicación web para consultar las condiciones meteorológicas y los pronósticos, con diseño responsive, una interfaz basada en glassmorphism e información de Open-Meteo.",
+    tecnologias: ["React", "Vite", "JavaScript", "CSS", "Open-Meteo"],
+    demo: "https://react-profesional-app-mu.vercel.app/",
+    estado: "Publicado",
+  },
+  {
+    nombre: "Landing Page — Nicolás",
+    categoria: "Proyecto web",
+    titulo: "Landing page para un artista",
+    descripcion:
+      "Página de presentación para un artista, con información sobre su trabajo y trayectoria, una estructura clara y adaptación a distintos dispositivos.",
+    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+    demo: "https://nicolasgualeguay.vercel.app/",
+    estado: "Publicado",
+  },
+  {
+    nombre: "Datos Abiertos",
+    categoria: "Proyecto personal",
+    titulo: "Explorador de datos públicos",
+    descripcion:
+      "Aplicación web orientada a explorar indicadores y estadísticas públicas de Argentina, con visualizaciones que facilitan la consulta y comprensión de los datos.",
+    tecnologias: ["React", "Vite", "JavaScript", "Recharts", "CSS"],
+    demo: "https://datos-abiertos-eight.vercel.app/",
+    estado: "Publicado",
+  },
+  {
+    nombre: "Pulso Público",
+    categoria: "Proyecto personal · En desarrollo",
+    titulo: "Dashboard de datos públicos",
+    descripcion:
+      "Proyecto en evolución enfocado en datos públicos de Argentina y Entre Ríos. Presenta indicadores y estadísticas mediante visualizaciones para facilitar la exploración de información.",
+    tecnologias: ["React", "Vite", "JavaScript", "Recharts", "CSS"],
+    demo: "https://pulso-p-blico.vercel.app/",
+    github: "https://github.com/mariano925/Pulso-P-blico",
+    estado: "En desarrollo",
+  },
+]
 
 function Proyectos() {
   return (
     <section className="proyectos" id="proyectos">
-
       <div className="proyectos-contenido">
+        <p className="proyectos-subtitle">PROYECTOS</p>
 
-        <p className="proyectos-subtitle">
-          PROYECTOS
+        <h2>Trabajos y proyectos en los que estoy trabajando.</h2>
+
+        <p className="proyectos-descripcion">
+          Una selección de sitios web y aplicaciones que desarrollé
+          para clientes y como parte de mi formación profesional.
         </p>
 
-        <h2>
-          Algunos de mis trabajos y próximos proyectos.
-        </h2>
-
         <div className="proyectos-lista">
-
-          {/* Proyecto Nicolás */}
-
-          <article className="proyecto">
-
-            <div className="proyecto-imagen">
-              <p>Imagen del proyecto</p>
-            </div>
-
-            <div className="proyecto-info">
-
-              <h3>
-                Landing Page — Nicolás
-              </h3>
-
-              <p>
-                Landing page desarrollada para presentar el trabajo y la
-                trayectoria de un artista, con una estructura clara y
-                adaptada a distintos dispositivos.
-              </p>
-
-              <p className="proyecto-tecnologias">
-                React · Vite · CSS · Vercel
-              </p>
-
-              <div className="proyecto-links">
-
-                <a href="#" target="_blank" rel="noreferrer">
-                  Ver proyecto
-                </a>
-
-                <a href="#" target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-
+          {proyectos.map((proyecto, index) => (
+            <article className="proyecto" key={proyecto.nombre}>
+              <div
+                className={`proyecto-imagen proyecto-imagen-${index + 1}`}
+                role="img"
+                aria-label={`Espacio reservado para la captura de ${proyecto.nombre}`}
+              >
+                <span className="proyecto-imagen-etiqueta">
+                  Captura del proyecto
+                </span>
               </div>
 
-            </div>
+              <div className="proyecto-info">
+                <p className="proyecto-categoria">
+                  {proyecto.categoria}
+                </p>
 
-          </article>
+                <h3>{proyecto.titulo}</h3>
 
+                <p className="proyecto-texto">
+                  {proyecto.descripcion}
+                </p>
 
-          {/* Proyecto Electricista */}
+                <ul
+                  className="proyecto-tecnologias"
+                  aria-label="Tecnologías utilizadas"
+                >
+                  {proyecto.tecnologias.map((tecnologia) => (
+                    <li key={tecnologia}>{tecnologia}</li>
+                  ))}
+                </ul>
 
-          <article className="proyecto">
+                <div className="proyecto-links">
+                  <a
+                    href={proyecto.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver ${proyecto.nombre} en una nueva pestaña`}
+                  >
+                    Ver proyecto
+                    <span aria-hidden="true"> ↗</span>
+                  </a>
 
-            <div className="proyecto-imagen">
-              <p>Imagen del proyecto</p>
-            </div>
+                  {proyecto.github && (
+                    <a
+                      className="proyecto-link-secundario"
+                      href={proyecto.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Ver el código de ${proyecto.nombre} en GitHub`}
+                    >
+                      GitHub
+                      <span aria-hidden="true"> ↗</span>
+                    </a>
+                  )}
 
-            <div className="proyecto-info">
-
-              <h3>
-                Landing Page — Electricista
-              </h3>
-
-              <p>
-                Landing page diseñada para presentar los servicios de un
-                profesional y facilitar el contacto con personas interesadas
-                en sus servicios.
-              </p>
-
-              <p className="proyecto-tecnologias">
-                HTML · CSS · JavaScript · Vercel
-              </p>
-
-              <div className="proyecto-links">
-
-                <a href="#" target="_blank" rel="noreferrer">
-                  Ver proyecto
-                </a>
-
-                <a href="#" target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-
+                  <span
+                    className={`proyecto-estado ${
+                      proyecto.estado === "En desarrollo"
+                        ? "proyecto-estado-desarrollo"
+                        : ""
+                    }`}
+                  >
+                    {proyecto.estado}
+                  </span>
+                </div>
               </div>
-
-            </div>
-
-          </article>
-
-
-          {/* Próximo proyecto: Catálogo */}
-
-          <article className="proyecto proyecto-futuro">
-
-            <div className="proyecto-imagen">
-              <p>Próximamente</p>
-            </div>
-
-            <div className="proyecto-info">
-
-              <h3>
-                Catálogo Online
-              </h3>
-
-              <p>
-                Próximo proyecto orientado a mostrar productos o servicios
-                de forma clara, accesible y organizada.
-              </p>
-
-              <p className="proyecto-tecnologias">
-                React · Vite · CSS · JavaScript
-              </p>
-
-              <div className="proyecto-links">
-
-                <a href="#contacto">
-                  Próximamente
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          {/* Próximo proyecto: Institucional */}
-
-          <article className="proyecto proyecto-futuro">
-
-            <div className="proyecto-imagen">
-              <p>Próximamente</p>
-            </div>
-
-            <div className="proyecto-info">
-
-              <h3>
-                Página Institucional
-              </h3>
-
-              <p>
-                Próximo proyecto destinado a presentar la identidad,
-                servicios e información de una empresa, profesional,
-                organización o proyecto.
-              </p>
-
-              <p className="proyecto-tecnologias">
-                React · Vite · CSS · JavaScript
-              </p>
-
-              <div className="proyecto-links">
-
-                <a href="#contacto">
-                  Próximamente
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
+            </article>
+          ))}
         </div>
-
       </div>
-
     </section>
   )
 }
