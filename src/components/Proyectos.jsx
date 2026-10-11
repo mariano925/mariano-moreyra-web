@@ -1,123 +1,126 @@
-
-import "./Proyectos.css"
+import "./Proyectos.css";
 
 const proyectos = [
   {
     nombre: "Frigotec",
     categoria: "Proyecto para cliente",
-    titulo: "Sitio web — Frigotec",
     descripcion:
-      "Sitio web para una empresa de refrigeración comercial, diseñado para presentar sus servicios, sectores de atención y canales de contacto de forma clara y profesional.",
-    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+      "Sitio web para un servicio técnico de refrigeración, con una presentación clara de sus servicios y canales de contacto.",
+    imagen: "/proyectos/frigotec.webp",
+    alt: "Captura del sitio web de Frigotec",
+    tecnologias: ["React", "Vite", "CSS"],
     demo: "https://frigotec-web.vercel.app/",
-    estado: "Publicado",
   },
   {
     nombre: "Service Refrigeración",
     categoria: "Proyecto para cliente",
-    titulo: "Sitio web — Service Refrigeración",
     descripcion:
-      "Sitio web de servicios de refrigeración y aire acondicionado, con información orientada a facilitar la consulta de servicios y el contacto con el negocio.",
-    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+      "Sitio web para un servicio técnico de heladeras y aire acondicionado, pensado para presentar los servicios y facilitar las consultas.",
+    imagen: "/proyectos/services.webp",
+    alt: "Captura del sitio web de Service Refrigeración",
+    tecnologias: ["React", "Vite", "CSS"],
     demo: "https://www.service-heladerasrch.com.ar/",
     github: "https://github.com/mariano925/service-refrigeracion-react",
-    estado: "Publicado",
   },
   {
     nombre: "MeteoGlass",
     categoria: "Proyecto personal",
-    titulo: "Aplicación del clima — MeteoGlass",
     descripcion:
-      "Aplicación web para consultar las condiciones meteorológicas y los pronósticos, con diseño responsive, una interfaz basada en glassmorphism e información de Open-Meteo.",
-    tecnologias: ["React", "Vite", "JavaScript", "CSS", "Open-Meteo"],
+      "Aplicación meteorológica que permite consultar condiciones del tiempo y explorar información climática de distintas localidades.",
+    imagen: "/proyectos/cielovivo.webp",
+    alt: "Captura de la aplicación meteorológica MeteoGlass",
+    tecnologias: ["React", "API", "Leaflet"],
     demo: "https://react-profesional-app-mu.vercel.app/",
-    estado: "Publicado",
   },
   {
     nombre: "Landing Page — Nicolás",
     categoria: "Proyecto web",
-    titulo: "Landing page para un artista",
     descripcion:
-      "Página de presentación para un artista, con información sobre su trabajo y trayectoria, una estructura clara y adaptación a distintos dispositivos.",
-    tecnologias: ["React", "Vite", "CSS", "Vercel"],
+      "Página de presentación diseñada para comunicar los servicios y facilitar el contacto con potenciales clientes.",
+    imagen: "/proyectos/nicolas.webp",
+    alt: "Captura de la landing page de Nicolás",
+    tecnologias: ["React", "Vite", "CSS"],
     demo: "https://nicolasgualeguay.vercel.app/",
-    estado: "Publicado",
   },
   {
     nombre: "Datos Abiertos",
     categoria: "Proyecto personal",
-    titulo: "Explorador de datos públicos",
     descripcion:
-      "Aplicación web orientada a explorar indicadores y estadísticas públicas de Argentina, con visualizaciones que facilitan la consulta y comprensión de los datos.",
-    tecnologias: ["React", "Vite", "JavaScript", "Recharts", "CSS"],
+      "Proyecto de exploración de datos públicos orientado a presentar indicadores de Argentina, Entre Ríos y Gualeguay.",
+    imagen: "/proyectos/datosabiertos.webp",
+    alt: "Captura del proyecto Datos Abiertos",
+    tecnologias: ["React", "Vite", "Datos públicos"],
     demo: "https://datos-abiertos-eight.vercel.app/",
-    estado: "Publicado",
   },
   {
     nombre: "Pulso Público",
-    categoria: "Proyecto personal · En desarrollo",
-    titulo: "Dashboard de datos públicos",
+    categoria: "Proyecto personal",
+    estado: "En desarrollo",
     descripcion:
-      "Proyecto en evolución enfocado en datos públicos de Argentina y Entre Ríos. Presenta indicadores y estadísticas mediante visualizaciones para facilitar la exploración de información.",
-    tecnologias: ["React", "Vite", "JavaScript", "Recharts", "CSS"],
+      "Dashboard de datos públicos que busca facilitar la consulta y comparación de indicadores demográficos y sociales.",
+    imagen: "/proyectos/pulso.webp",
+    alt: "Captura del dashboard Pulso Público",
+    tecnologias: ["React", "Vite", "Recharts"],
     demo: "https://pulso-p-blico.vercel.app/",
     github: "https://github.com/mariano925/Pulso-P-blico",
-    estado: "En desarrollo",
   },
-]
+];
 
 function Proyectos() {
   return (
-    <section className="proyectos" id="proyectos">
-      <div className="proyectos-contenido">
-        <p className="proyectos-subtitle">PROYECTOS</p>
+    <section id="proyectos" className="proyectos">
+      <div className="proyectos-contenedor">
+        <header className="proyectos-header">
+          <p className="proyectos-etiqueta">Mi trabajo</p>
+          <h2>Proyectos destacados</h2>
+          <p className="proyectos-intro">
+            Una selección de sitios web y aplicaciones que desarrollé para
+            clientes y como parte de mi aprendizaje.
+          </p>
+        </header>
 
-        <h2>Trabajos y proyectos en los que estoy trabajando.</h2>
-
-        <p className="proyectos-descripcion">
-          Una selección de sitios web y aplicaciones que desarrollé
-          para clientes y como parte de mi formación profesional.
-        </p>
-
-        <div className="proyectos-lista">
-          {proyectos.map((proyecto, index) => (
-            <article className="proyecto" key={proyecto.nombre}>
-              <div
-                className={`proyecto-imagen proyecto-imagen-${index + 1}`}
-                role="img"
-                aria-label={`Espacio reservado para la captura de ${proyecto.nombre}`}
-              >
-                <span className="proyecto-imagen-etiqueta">
-                  Captura del proyecto
-                </span>
+        <div className="proyectos-grid">
+          {proyectos.map((proyecto) => (
+            <article className="proyecto-card" key={proyecto.nombre}>
+              <div className="proyecto-imagen">
+                <img
+                  src={proyecto.imagen}
+                  alt={proyecto.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
-              <div className="proyecto-info">
-                <p className="proyecto-categoria">
-                  {proyecto.categoria}
-                </p>
+              <div className="proyecto-contenido">
+                <div className="proyecto-meta">
+                  <span className="proyecto-categoria">
+                    {proyecto.categoria}
+                  </span>
 
-                <h3>{proyecto.titulo}</h3>
+                  {proyecto.estado && (
+                    <span className="proyecto-estado">
+                      {proyecto.estado}
+                    </span>
+                  )}
+                </div>
 
-                <p className="proyecto-texto">
+                <h3>{proyecto.nombre}</h3>
+                <p className="proyecto-descripcion">
                   {proyecto.descripcion}
                 </p>
 
-                <ul
-                  className="proyecto-tecnologias"
-                  aria-label="Tecnologías utilizadas"
-                >
+                <ul className="proyecto-tecnologias" aria-label="Tecnologías">
                   {proyecto.tecnologias.map((tecnologia) => (
                     <li key={tecnologia}>{tecnologia}</li>
                   ))}
                 </ul>
 
-                <div className="proyecto-links">
+                <div className="proyecto-enlaces">
                   <a
                     href={proyecto.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Ver ${proyecto.nombre} en una nueva pestaña`}
+                    className="proyecto-link"
                   >
                     Ver proyecto
                     <span aria-hidden="true"> ↗</span>
@@ -125,26 +128,15 @@ function Proyectos() {
 
                   {proyecto.github && (
                     <a
-                      className="proyecto-link-secundario"
                       href={proyecto.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`Ver el código de ${proyecto.nombre} en GitHub`}
+                      className="proyecto-link proyecto-link-secundario"
                     >
-                      GitHub
+                      Ver código
                       <span aria-hidden="true"> ↗</span>
                     </a>
                   )}
-
-                  <span
-                    className={`proyecto-estado ${
-                      proyecto.estado === "En desarrollo"
-                        ? "proyecto-estado-desarrollo"
-                        : ""
-                    }`}
-                  >
-                    {proyecto.estado}
-                  </span>
                 </div>
               </div>
             </article>
@@ -152,7 +144,7 @@ function Proyectos() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Proyectos
+export default Proyectos;
